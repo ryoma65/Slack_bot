@@ -7,7 +7,7 @@ readme = "README.md"
 # requires-python = "^3.13" ← これは下の dependencies に移動します
 
 [tool.poetry.dependencies]
-python = "^3.13" # ← Pythonのバージョン指定はこちらに
+python = "^3.11" # ← Pythonのバージョン指定はこちらに
 flask = ">=3.1.1,<4.0.0"
 gunicorn = ">=23.0.0,<24.0.0"
 slack-bolt = ">=1.23.0,<2.0.0"
