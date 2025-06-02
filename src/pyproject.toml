@@ -1,21 +1,22 @@
-[project]
+[tool.poetry] # ← ★★★ ここが [project] から [tool.poetry] に変わります ★★★
 name = "slack-bot-1"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "ryoma",email = "yamaguchi@sonettique.com"}
-]
+authors = ["ryoma <yamaguchi@sonettique.com>"] # ← Poetryの推奨形式に修正
 readme = "README.md"
-requires-python = "^3.13"
-dependencies = [
-    "flask (>=3.1.1,<4.0.0)",
-    "gunicorn (>=23.0.0,<24.0.0)",
-    "slack-bolt (>=1.23.0,<2.0.0)",
-    "requests (>=2.32.3,<3.0.0)",
-    "python-dotenv (>=1.1.0,<2.0.0)"
-]
+# requires-python = "^3.13" ← これは下の dependencies に移動します
 
+[tool.poetry.dependencies]
+python = "^3.13" # ← Pythonのバージョン指定はこちらに
+flask = ">=3.1.1,<4.0.0"
+gunicorn = ">=23.0.0,<24.0.0"
+slack-bolt = ">=1.23.0,<2.0.0"
+requests = ">=2.32.3,<3.0.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+
+# [tool.poetry.group.dev.dependencies] # 開発用依存関係があればこのように記述します
+# pytest = "^7.0.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"] # poetry-coreのバージョン指定を一般的なものに修正
 build-backend = "poetry.core.masonry.api"
