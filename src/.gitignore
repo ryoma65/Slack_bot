@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+# ローカル環境変数ファイル
+.env
+# IDE設定ファイル
+.vscode/
+.idea/
+# OS固有ファイル
+.DS_Store
+Thumbs.db
